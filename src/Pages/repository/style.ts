@@ -1,18 +1,85 @@
 import styled from 'styled-components';
 
-import { shade } from 'polished';
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #a8a8b3;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: #666;
+    }
+    
+    svg {
+      margin-right: 4px;
+    }
+  }
+`;
 
-export const Title = styled.h1`
-    font-size: 48px;
-    color: #3A3A3A;
-    max-width: 450px;
-    line-height: 56px;
-    margin-top: 80px;
+export const RepositoryInfo = styled.section`
+  margin-top: 80px;
+  
+  header {
+    display: flex;
+    align-items: center;
+    
+	img {
+	  width: 120px;
+	  height: 120px;
+	  border-radius: 50%;
+	}
+	  
+	div {
+      margin-left: 24px;
+	    
+      strong {
+    	font-size: 36px;
+    	color: #545454;
+      }
+    
+      p {
+    	font-size: 18px;
+    	color: #929292;
+    	margin-top: 4px;
+      }
+  	}
+  }
+  
+  ul {
+  	display: flex;
+  	list-style: none;
+  	margin-top: 40px;
+  	
+  	li {
+  	  
+  	  & + li {
+  	  	margin-left: 80px;
+  	  }
+  	  
+  	  strong {
+  	    display: block;
+  	    font-size: 36px;
+  	    font-weight: bold;
+  	    color: #3d3d4d;
+  	  }
+  	  
+  	  span {
+  	  	display: block;
+  	  	margin-top: 4px;
+  	  	color: #949494;
+  	  }
+  	}
+  }
 `
 
-export const Repositories = styled.div `
-    margin-top: 80px;
-    max-width: 700px;
+export const Issues = styled.section `
+	margin-top: 80px;
 
     a {
         background: #FFF;
@@ -31,12 +98,6 @@ export const Repositories = styled.div `
 
         & + a {
             margin-top: 18px;
-        }
-
-        img {
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
         }
         
         div {
